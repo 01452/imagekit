@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dotenv from 'dotenv'
 import ImageKit from 'imagekit'
+import * as process from "node:process";
 
 dotenv.config()
 
@@ -25,6 +26,9 @@ const imagekitAuthHandler = (req: any, res: any) => {
 
 // https://vite.dev/config/
 export default defineConfig({
+    server: {
+        port: process.env.PORT ? parseInt(process.env.PORT): 5743
+    },
   plugins: [
     react(),
     {
