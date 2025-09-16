@@ -29,6 +29,7 @@ export default defineConfig({
     server: {
         port: process.env.PORT ? parseInt(process.env.PORT): 5743,
         host: true,
+        allowedHosts: true
     },
   plugins: [
     react(),
