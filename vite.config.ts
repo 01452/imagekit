@@ -27,7 +27,8 @@ const imagekitAuthHandler = (req: any, res: any) => {
 // https://vite.dev/config/
 export default defineConfig({
     server: {
-        port: process.env.PORT ? parseInt(process.env.PORT): 5743
+        port: process.env.PORT ? parseInt(process.env.PORT): 5743,
+        host: true,
     },
   plugins: [
     react(),
